@@ -2,9 +2,20 @@
 
 享受一键将ncm转化为MP3。
 
-![1](1.gif)
+<img src="1.gif" width="450" height="250"/>
+
+## 编译运行
+
+请将
+
+https://github.com/taurusxin/ncmdump/releases/tag/1.5.0
+
+下载的numdump.exe复制到程序根目录下，并更名为main.exe。
 
 
+## 引用
+
+[ncmdump](https://github.com/taurusxin/ncmdump)
 
 ## 事由
 
@@ -12,24 +23,3 @@
 
   每一次手动拖动又太复杂，于是乎工欲善其事必先利其器，随手写了个批量自动转化的工具。
 
-## 编译运行
-
-请将
-
-https://raw.githubusercontent.com/NoColor2/ncmdump/master/main.exe
-
-复制到程序根目录下，文件名必须为main.exe。
-
-```bash
-cd ~
-git clone https://github.com/cyf-gh/ncmdumpHelper.git
-curl https://raw.githubusercontent.com/NoColor2/ncmdump/master/main.exe
-cp ./main.exe ~/ncmdumpHelper/ncmdump/ncmdump.App/bin/Debug
-cp ./main.exe ~/ncmdumpHelper/ncmdump/ncmdump.App/bin/Release
-```
-
-## 引用
-
-https://github.com/anonymous5l/ncmdump
-
-https://github.com/NoColor2/ncmdump
