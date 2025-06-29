@@ -1,13 +1,13 @@
 # ncmdumpHelper
 
+下载 https://github.com/cyf-gh/ncmdumpHelper/releases/download/v1.0/v1.0.zip 
+
+运行 ncmdump.App.exe
+
 享受一键将ncm转化为MP3。
 
-<img src="1.gif" width="350" height="150"/>
+<img src="1.gif" width="450" height="250"/> <img src="v1.0.png" width="450" height="250"/>
 
-## 运行
-
-下载 https://github.com/cyf-gh/ncmdumpHelper/releases/download/v1.0/v1.0.zip 
-运行 ncmdump.App.exe
 
 ## 引用
 
