@@ -44,6 +44,7 @@
             this.bt_conversion = new System.Windows.Forms.Button();
             this.cb_ifDoDelete = new System.Windows.Forms.CheckBox();
             this.tt_path = new System.Windows.Forms.ToolTip(this.components);
+            this.ncmdumpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -102,7 +103,8 @@
             // 
             this.advanceToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.findAllNcmsInTheChildFoldersToolStripMenuItem,
-            this.switchConsoleToolStripMenuItem});
+            this.switchConsoleToolStripMenuItem,
+            this.ncmdumpToolStripMenuItem});
             this.advanceToolStripMenuItem.Name = "advanceToolStripMenuItem";
             this.advanceToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.advanceToolStripMenuItem.Text = "高级";
@@ -213,6 +215,13 @@
             this.cb_ifDoDelete.Text = "转换后删除NCM文件";
             this.cb_ifDoDelete.UseVisualStyleBackColor = true;
             // 
+            // ncmdumpToolStripMenuItem
+            // 
+            this.ncmdumpToolStripMenuItem.Name = "ncmdumpToolStripMenuItem";
+            this.ncmdumpToolStripMenuItem.Size = new System.Drawing.Size(279, 26);
+            this.ncmdumpToolStripMenuItem.Text = "ncmdump";
+            this.ncmdumpToolStripMenuItem.Click += new System.EventHandler(this.ncmdumpToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -257,6 +266,7 @@
         private System.Windows.Forms.ToolStripMenuItem switchConsoleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 开ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 关ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ncmdumpToolStripMenuItem;
     }
 }
 

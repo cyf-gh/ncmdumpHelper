@@ -132,6 +132,38 @@ namespace ncmdump.App
         }
 
         /// <summary>
+        /// 启动一个 CMD 窗口，并将其当前目录设置为应用程序的启动目录。
+        /// </summary>
+        private void OpenCmdAtAppDirectory()
+        {
+            try
+            {
+                // 获取当前应用程序的启动目录
+                string appDirectory = Application.StartupPath;
+
+                ProcessStartInfo startInfo = new ProcessStartInfo
+                {
+                    FileName = "cmd.exe",
+                    // /K 参数表示执行完命令后保持 CMD 窗口打开
+                    // cd /d 表示切换目录，/d 用于切换不同驱动器的目录
+                    Arguments = $"/K \"cd /d \"{appDirectory}\"\"", // CMD 窗口打开后，直接切换到应用目录
+                    UseShellExecute = true, // 重要：设置为 true 才能让 CMD 拥有自己的独立窗口
+                    CreateNoWindow = false, // 明确表示要创建窗口
+                    WindowStyle = ProcessWindowStyle.Normal // 确保窗口正常显示
+                };
+
+                // 启动 CMD 进程
+                Process.Start( startInfo );
+                Log.Info( $"已在 [{appDirectory}] 目录启动 CMD 窗口。" );
+                MessageBox.Show( $"已成功打开CMD窗口。\nCMD窗口的当前目录为:\n{appDirectory}\n\n您可以在其中直接运行 'main.exe'。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information );
+            } catch (Exception ex)
+            {
+                Log.Error( $"启动 CMD 窗口时发生错误: {ex.Message}" );
+                MessageBox.Show( $"启动 CMD 窗口时发生错误: {ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error );
+            }
+        }
+
+        /// <summary>
         /// 更改NCM路径并刷新文件列表。
         /// </summary>
         /// <param name="path">新的NCM路径。</param>
@@ -443,6 +475,11 @@ namespace ncmdump.App
             RegistryHelper.SetConsoleSetting( false );
             ConsoleHelper.HideConsole();
             Console.WriteLine( "控制台已隐藏。" ); // 这条消息可能不会被看到，因为控制台可能已经隐藏
+        }
+
+        private void ncmdumpToolStripMenuItem_Click( object sender, EventArgs e )
+        {
+            OpenCmdAtAppDirectory();
         }
     }
 }
