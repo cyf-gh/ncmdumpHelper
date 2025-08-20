@@ -252,7 +252,7 @@ namespace ncmdump.App
                     UpdateFormTitle( i + 1, ncm.Name ); // 更新进度
                     Application.DoEvents(); // 强制UI更新
 
-                    string cmdArgs = $"/C \"{mNcmDumpPath}\" \"{ncm.FullName}\"";
+                    string cmdArgs = $"/C \"\"{mNcmDumpPath}\" \"{ncm.FullName}\"\"";
 
                     ProcessStartInfo startInfo = new ProcessStartInfo
                     {
