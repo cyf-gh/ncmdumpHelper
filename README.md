@@ -1,6 +1,6 @@
 # ncmdumpHelper
 
-下载 https://github.com/cyf-gh/ncmdumpHelper/releases/download/v1.0/v1.0.zip 
+下载 Release页面 
 
 运行 ncmdump.App.exe
 
